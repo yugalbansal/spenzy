@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Spennzy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    background: linear-gradient(to right, #590297, #9476b1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    background-color: #1e1e2f;
+    padding: 15px 0;
+    color: white;
+    width: 100%;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.checkout-container {
+    max-width: 800px;
+    background: white;
+    margin: 50px auto;
+    padding: 55px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2, h3 {
+    text-align: center;
+    color: #333;
+}
+
+.form-section {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.form-section input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    display: block;
+}
+
+.card-details {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.card-details input {
+    width: 50%;
+}
+
+.order-summary {
+    width: 100%;
+    padding: 15px;
+    background: #f8f8f8;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.place-order-btn {
+    width: 100%;
+    padding: 15px;
+    background: #1e1e2f;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.place-order-btn:hover {
+    background: #32324a;
+    transform: scale(1.17);
+}
+
+footer {
+    text-align: center;
+    background: #1e1e2f;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+  </style>
+    <header>
+        <nav>
+            <div class="logo">Spennzy</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Buy</a></li>
+                <li><a href="products.html?type=rental">Rent</a></li>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="checkout-container">
+            <h2>Checkout</h2>
+            <form id="checkout-form">
+                <div class="form-section">
+                    <h3>Shipping Information</h3>
+                    <input type="text" placeholder="Full Name" required>
+                    <input type="email" placeholder="Email" required>
+                    <input type="text" placeholder="Address" required>
+                    <input type="text" placeholder="City" required>
+                    <input type="text" placeholder="Postal Code" required>
+                </div>
+
+                <div class="form-section">
+                    <h3>Payment Information</h3>
+                    <input type="text" placeholder="Card Number" required>
+                    <div class="card-details">
+                        <input type="text" placeholder="MM/YY" required>
+                        <input type="text" placeholder="CVV" required>
+                    </div>
+                </div>
+
+                <div class="order-summary">
+                    <h3>Order Summary</h3>
+                    <div id="order-items">
+                        <!-- Order items will be loaded dynamically -->
+                    </div>
+                    <div class="total">
+                        <span>Total:</span>
+                        <span id="order-total">$0.00</span>
+                    </div>
+                </div>
+
+                <button type="submit" class="place-order-btn">Place Order</button>
+            </form>
+        </div>
+    </main>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>

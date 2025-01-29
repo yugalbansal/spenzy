@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In Page</title>
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Navbar styling */
+        header {
+            background: #e5c7ff;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        
+.logo {
+  display: flex;
+  font-size: 1.3rem;
+  font-weight: 800;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -1px;
+}
+.logo-image{
+  height: 50px;
+  width: 50px;
+}
+        /* Navbar styling */
+header {
+    background: rgba(52, 18, 82, 0.5); 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: linear-gradient(to left, #8e44ad, #ff6a00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -1px;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        /* nav ul li a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background: linear-gradient(to left, #8e44ad, #ff6a00);
+            transition: width 0.3s;
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+        } */
+/* Navbar buttons styling */
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 700; /* Bold text */
+    font-size: 18px; /* Larger font size */
+    transition: all 0.3s ease; /* Smooth transition for size and color */
+    position: relative;
+}
+
+nav ul li a:hover {
+    color: #e955dc; /* Change text color on hover */
+    font-size: 20px; /* Increase size on hover */
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background: linear-gradient(to left, #8e44ad, #ff6a00);
+    transition: width 0.3s;
+}
+
+nav ul li a:hover::after {
+    width: 100%; /* Expand underline effect on hover */
+}
+
+        /* Full-screen background video */
+        body, html {
+            height: 100%;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .background-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            object-fit: cover;
+            background-position: center;
+        }
+
+        /* Sign-in container */
+        .sign-in-container {
+            position: fixed;
+            top: 50%;
+            left: 55%;
+            transform: translateY(-50%);
+            background-color: rgba(201, 163, 230, 0.8);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+            width: 380px;
+            z-index: 10;
+        }
+
+        /* Form styling */
+        .sign-in-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .sign-in-form input {
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #d5a0ff;
+            font-size: 16px;
+            background-color: #fff;
+        }
+
+        /* Button styling */
+        .sign-in-form button {
+            padding: 15px;
+            border: none;
+            background-color: #53486b;
+            color: rgb(246, 243, 247);
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .sign-in-form button:hover {
+            background-color: #2d074a;
+        }
+
+        .sign-in-form button:active {
+            transform: scale(0.98);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .sign-in-form h2 {
+            color: white;
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .create-account {
+            text-align: center;
+            font-size: 14px;
+            color: white;
+            margin-top: 20px;
+        }
+
+        .create-account a {
+            color: #c09eff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .create-account a:hover {
+            color: #5b0957;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Spennzy</h1>
+                <img class="logo-image" src="logofix.png" alt="logo">
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Shop</a></li>
+                <li><a href="products.html?type=rental">Rent</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="signup.html">login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Background video -->
+    <video autoplay muted loop class="background-video">
+        <source src="login.mp4" type="video/mp4">
+    </video>
+
+    <!-- Sign-in form -->
+    <div class="sign-in-container">
+        <form class="sign-in-form" id="signInForm">
+            <h2>Spendzzy Awaits! Login</h2> 
+            <input type="text" id="name" name="name" placeholder="Enter your Name" required>
+            <input type="email" id="email" name="email" placeholder="Enter your Email" required>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your Phone Number" required>
+            <button type="submit" id="loginButton">Login</button>
+        </form>
+
+        <!-- Create Account Section -->
+        <div class="create-account">
+            <p>Don't have an account? <a href="#">Create one here</a></p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('signInForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent form from submitting the default way
+    
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+    
+            // Regular expressions for validation
+            const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            const phonePattern = /^[0-9]{10}$/;
+    
+            // Validate Name (non-empty)
+            if (name.trim() === "") {
+                alert('Please enter your name.');
+                return;
+            }
+    
+            // Validate Email (non-empty and correct format)
+            if (email.trim() === "") {
+                alert('Please enter your email.');
+                return;
+            } else if (!emailPattern.test(email)) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+    
+            // Validate Phone Number (non-empty and 10 digits)
+            if (phone.trim() === "") {
+                alert('Please enter your phone number.');
+                return;
+            } else if (!phonePattern.test(phone)) {
+                alert('Please enter a valid phone number (10 digits).');
+                return;
+            }
+    
+            // If all validations pass, show success message and redirect
+            alert('Login successful!');
+            console.log('Name:', name);
+            console.log('Email:', email);
+            console.log('Phone:', phone);
+    
+            // Redirect to index.html after successful login
+            window.location.href = 'index.html';  // Redirect to index page
+        });
+    </script>
+
+</body>
+</html>

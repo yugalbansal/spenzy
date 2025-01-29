@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Spenzzy</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Spennzy</h1>
+                <img class="logo-image" src="logofix.png" alt="logo">
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Shop</a></li>
+                <li><a href="products.html?type=rental">Rent</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="login.html">login</a></li>
+            </ul>
+            
+        </nav>
+    </header>
+
+    <main class="shop-main">
+        <div class="filters-section">
+            <div class="search-bar">
+                <input type="text" placeholder="Search products..." id="search-input">
+            </div>
+            <div class="filter-groups">
+                <div class="filter-group">
+                    <h3>Categories</h3>
+                    <label><input type="checkbox" value="laptops"> Laptops</label>
+                    <label><input type="checkbox" value="phones"> Phones</label>
+                    <label><input type="checkbox" value="accessories"> Accessories</label>
+                    <label><input type="checkbox" value="gaming"> Gaming</label>
+                </div>
+                <div class="filter-group">
+                    <h3>Price Range</h3>
+                    <input type="range" min="0" max="2000" step="100" id="price-range">
+                    <div class="price-inputs">
+                        <input type="number" id="min-price" placeholder="Min">
+                        <input type="number" id="max-price" placeholder="Max">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="products-container">
+            <div class="products-header">
+                <h2>All Products</h2>
+                <select id="sort-select">
+                    <option value="featured">Featured</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                    <option value="newest">Newest First</option>
+                </select>
+            </div>
+            <div class="product-grid">
+                <!-- Products loaded dynamically -->
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Spenzzy</h3>
+                <ul>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Customer Service</h3>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Shipping Info</a></li>
+                    <li><a href="#">Returns</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <ul>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Facebook</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - Spenzzy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Spennzy</h1>
+                <img class="logo-image" src="logofix.png" alt="logo">
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Buy</a></li>
+                <li><a href="products.html?type=rental">Rent</a></li>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="cart-container">
+            <h2>Your Cart</h2>
+            <div class="cart-items">
+                <!-- Cart items will be loaded dynamically -->
+            </div>
+            <div class="cart-summary">
+                <div class="subtotal">
+                    <span>Subtotal:</span>
+                    <span id="cart-subtotal">$0.00</span>
+                </div>
+                <button class="checkout-btn" onclick="window.location.href='checkout.html'">
+                    Proceed to Checkout
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Spennzy. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
